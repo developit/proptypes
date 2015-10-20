@@ -1,0 +1,12 @@
+{
+  "name": "proptypes",
+  "version": "0.14.0",
+  "description": "React's PropTypes, packaged up as a standalone module.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/developit/proptypes.git"
+  },
+  "homepage": "https://github.com/developit/proptypes",
+  "license": "BSD"
+}
