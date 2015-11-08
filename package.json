@@ -1,6 +1,6 @@
 {
   "name": "proptypes",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "description": "React's PropTypes, packaged up as a standalone module.",
   "main": "index.js",
   "scripts": {
