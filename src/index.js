@@ -463,4 +463,4 @@ function getClassName(propValue) {
   return propValue.constructor.name;
 }
 
-module.exports = ReactPropTypes;
+export default ReactPropTypes;
