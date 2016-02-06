@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === 'function' && define.amd) {
-    define('PropTypes', ['exports'], factory);
-  } else if (typeof exports !== 'undefined') {
-    factory(exports);
+    define('PropTypes', ['exports', 'module'], factory);
+  } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
+    factory(exports, module);
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports);
+    factory(mod.exports, mod);
     global.PropTypes = mod.exports;
   }
-})(this, function (exports) {
+})(this, function (exports, module) {
 
   'use strict';
 
