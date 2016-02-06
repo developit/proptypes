@@ -1,3 +1,4 @@
 {
-  "modules": "ignore"
+  "comments": false,
+  "loose": "all"
 }
