@@ -5,7 +5,8 @@
   "description": "React's PropTypes, packaged up as a standalone module.",
   "main": "index.js",
   "scripts": {
-    "build": "babel -f $npm_package_main -m umd --module-id $npm_package_amdName -s -o $npm_package_main < src/index.js"
+    "build": "babel -f $npm_package_main -m umd --module-id $npm_package_amdName -s -o $npm_package_main < src/index.js",
+    "release": "npm run -s build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
