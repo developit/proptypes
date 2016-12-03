@@ -54,6 +54,7 @@
     number: createPrimitiveTypeChecker('number'),
     object: createPrimitiveTypeChecker('object'),
     string: createPrimitiveTypeChecker('string'),
+    symbol: createPrimitiveTypeChecker('symbol'),
 
     any: createAnyTypeChecker(),
     arrayOf: createArrayOfTypeChecker,
@@ -294,6 +295,22 @@
     }
   }
 
+  function isSymbol(propType, propValue) {
+    if (propType === 'symbol') {
+      return true;
+    }
+
+    if (propValue['@@toStringTag'] === 'Symbol') {
+      return true;
+    }
+
+    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
+      return true;
+    }
+
+    return false;
+  }
+
   function getPropType(propValue) {
     var propType = typeof propValue;
     if (Array.isArray(propValue)) {
@@ -301,6 +318,9 @@
     }
     if (propValue instanceof RegExp) {
       return 'object';
+    }
+    if (isSymbol(propType, propValue)) {
+      return 'symbol';
     }
     return propType;
   }
