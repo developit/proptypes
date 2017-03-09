@@ -5,7 +5,7 @@
   "description": "React's PropTypes, packaged up as a standalone module.",
   "main": "index.js",
   "scripts": {
-    "build": "babel -f $npm_package_main -m umd --module-id $npm_package_amdName -s -o $npm_package_main < src/index.js",
+    "build": "babel --module-id $npm_package_amdName -s -d . src",
     "release": "npm run -s build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "files": [
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/developit/proptypes",
   "license": "BSD",
   "devDependencies": {
-    "babel": "^5.8.29"
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.2.1"
   }
 }
