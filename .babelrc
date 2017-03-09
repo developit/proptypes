@@ -1,4 +1,8 @@
 {
-  "comments": false,
-  "loose": "all"
+  "presets": [
+    ["env", {
+      "loose": true,
+      "modules": "umd"
+    }]
+  ]
 }
