@@ -34,6 +34,19 @@ let valid = check({
 valid;  // true
 ```
 
+### Disabling in production build
+
+With webpack:
+
+```js
+module.exports = {
+	resolve: {
+		alias: {
+			proptypes: 'proptypes/disabled',
+		}
+	}
+};
+```
 
 ### License
 
