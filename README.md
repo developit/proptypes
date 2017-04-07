@@ -11,16 +11,16 @@ If you're using PropTypes with React, it would be silly to reference this standa
 
 ```js
 function check(props, propTypes) {
-	for (let prop in propTypes) {
-		if (propTypes.hasOwnProperty(prop)) {
-			let err = propTypes[prop](props, prop, 'name', 'prop');
-			if (err) {
-				console.warn(err);
-				return false;
-			}
-		}
-	}
-	return true;
+  for (let prop in propTypes) {
+    if (propTypes.hasOwnProperty(prop)) {
+      let err = propTypes[prop](props, prop, 'name', 'prop');
+      if (err) {
+        console.warn(err);
+        return false;
+      }
+    }
+  }
+  return true;
 }
 
 let valid = check({
@@ -40,11 +40,11 @@ With webpack:
 
 ```js
 module.exports = {
-	resolve: {
-		alias: {
-			proptypes: 'proptypes/disabled',
-		}
-	}
+  resolve: {
+    alias: {
+      proptypes: 'proptypes/disabled',
+    }
+  }
 };
 ```
 
