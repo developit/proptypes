@@ -62,7 +62,7 @@ const Baz = (props) => (
 );
 
 Baz.propTypes = {
-  className: propTypes.string
+  className: PropTypes.string
 };
 
 // Out
