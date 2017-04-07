@@ -7,7 +7,7 @@ This is literally copied from the React 0.14 codebase.
 If you're using PropTypes with React, it would be silly to reference this standalone version.
 
 
-### Usage
+## Usage
 
 ```js
 function check(props, propTypes) {
@@ -34,7 +34,9 @@ let valid = check({
 valid;  // true
 ```
 
-### Disabling in production build
+## Production build
+
+### Disabling
 
 With webpack:
 
@@ -48,7 +50,28 @@ module.exports = {
 };
 ```
 
-### License
+### Removing the definitions with React 
+
+When you are using this package with React like API, you might want to save bandwidth by removing the definitions.
+You can use [babel-plugin-transform-react-remove-prop-types](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types) for that use case, for instance:
+
+```js
+// In
+const Baz = (props) => (
+  <div {...props} />
+);
+
+Baz.propTypes = {
+  className: propTypes.string
+};
+
+// Out
+const Baz = (props) => (
+  <div {...props} />
+);
+```
+
+## License
 
 BSD
 
