@@ -1,5 +1,7 @@
 # proptypes
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/developit/proptypes.svg)](https://greenkeeper.io/)
+
 > React's [PropTypes], packaged up as a standalone module.
 
 **DISCLAIMER:**
