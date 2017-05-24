@@ -4,6 +4,7 @@ proptype.isRequired = proptype;
 const getProptype = () => proptype;
 
 export default {
+    checkPropTypes: () => null,
     array: proptype,
     bool: proptype,
     func: proptype,

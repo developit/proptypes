@@ -22,6 +22,9 @@
     };
 
     exports.default = {
+        checkPropTypes: function checkPropTypes() {
+            return null;
+        },
         array: proptype,
         bool: proptype,
         func: proptype,
